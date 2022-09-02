@@ -21,4 +21,5 @@ public interface IRepository<T> : IQuery<T> where T : Entity
     T Add(T entity);
     T Update(T entity);
     T Delete(T entity);
+    bool Exist(int id);
 }

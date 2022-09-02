@@ -130,4 +130,9 @@ public class EfRepositoryBase<TEntity, TContext> : IAsyncRepository<TEntity>, IR
         Context.SaveChanges();
         return entity;
     }
+
+    public bool Exist(int id)
+    {
+        return Query().Any(e => e.Id == id);
+    }
 }
